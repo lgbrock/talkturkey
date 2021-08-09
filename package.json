@@ -1,0 +1,19 @@
+{
+  "name": "talkturkey",
+  "version": "1.0.0",
+  "description": "Social media app for dogs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Logan Brock",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  }
+}
