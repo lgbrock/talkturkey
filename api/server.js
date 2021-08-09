@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const userRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
+const postRoute = require('./routes/posts');
 
 // Dotenv config
 dotenv.config();
@@ -27,6 +28,7 @@ app.use(morgan('dev'));
 // Application - REST API - routes
 app.use('/api/user', userRoute);
 app.use('/api/auth', authRoute);
+app.use('/api/posts', postRoute);
 
 // Port Backend Server is running on
 app.listen(5000, () => {
