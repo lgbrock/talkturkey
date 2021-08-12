@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> A place for animal lovers to discuss and network to see how each community treats its furry friends! A full-stack solution with an integrated chat app keeps track of daily activities and habits for pets to be used by communities and vets. Used HTML, CSS, JS, React, Node, Socket.io, Material-UI and MongoDB to establish solution. The design is mobile-first, responsive, with accessibility in mind.
+> A place for animal lovers to discuss and network to see how each community treats its furry friends! A full-stack solution with an integrated chat app keeps track of daily activities and habits for pets to be used by communities and vets. Used HTML, CSS, JS, React, Node, Socket.io, Material-UI and MongoDB to establish a solution. The design is mobile-first, responsive, with accessibility in mind.
 
 ### 🏠 [Homepage](https://github.com/lgbrock/talkturkey)
 
