@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const multer = require('multer');
 const userRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
+const path = require('path');
 
 // Dotenv config
 dotenv.config();
@@ -19,11 +21,31 @@ mongoose.connect(
 		console.log('Connected to MonogoDB...');
 	}
 );
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // Middleware
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('dev'));
+
+// For Postman use - file.originalname
+const storage = multer.diskStorage({
+	destination: (req, file, cb) => {
+		cb(null, 'public/images');
+	},
+	filename: (req, file, cb) => {
+		cb(null, req.body.name);
+	},
+});
+
+const upload = multer({ storage: storage });
+app.post('/api/upload', upload.single('file'), (req, res) => {
+	try {
+		return res.status(200).json('File uploded successfully');
+	} catch (error) {
+		console.error(error);
+	}
+});
 
 // Application - REST API - routes
 app.use('/api/user', userRoute);
