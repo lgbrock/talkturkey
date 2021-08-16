@@ -21,9 +21,10 @@ const Login = () => {
 		<div className='login'>
 			<div className='loginWrapper'>
 				<div className='loginLeft'>
-					<h3 className='loginLogo'>Lamasocial</h3>
+					<h3 className='loginLogo'>Talk Turkey</h3>
 					<span className='loginDesc'>
-						Connect with friends and the world around you on Lamasocial.
+						Connect with your furry friends and the world around you on Talk
+						Turkey.
 					</span>
 				</div>
 				<div className='loginRight'>
