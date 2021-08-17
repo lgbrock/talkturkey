@@ -25,7 +25,7 @@ const Register = () => {
 				await axios.post('/auth/register', user);
 				history.push('/login');
 			} catch (err) {
-				console.log(err);
+				alert('Username has been taken');
 			}
 		}
 	};
@@ -34,10 +34,9 @@ const Register = () => {
 		<div className='login'>
 			<div className='loginWrapper'>
 				<div className='loginLeft'>
-					<h3 className='loginLogo'>Talk Turkey</h3>
+					<h3 className='loginLogo'>Lamasocial</h3>
 					<span className='loginDesc'>
-						CConnect with your furry friends and the world around you on Talk
-						Turkey.
+						Connect with friends and the world around you on Lamasocial.
 					</span>
 				</div>
 				<div className='loginRight'>

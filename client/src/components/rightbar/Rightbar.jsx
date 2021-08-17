@@ -50,7 +50,7 @@ const Rightbar = ({ user }) => {
 				<div className='birthdayContainer'>
 					<img className='birthdayImg' src='assets/gift.png' alt='' />
 					<span className='birthdayText'>
-						<b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
+						<b>Turkey Dog</b> and <b>3 other friends</b> have a birhday today.
 					</span>
 				</div>
 				<img className='rightbarAd' src='assets/ad.png' alt='' />
@@ -88,7 +88,7 @@ const Rightbar = ({ user }) => {
 						<span className='rightbarInfoValue'>
 							{user.relationship === 1
 								? 'Single'
-								: user.relationship === 1
+								: user.relationship === 2
 								? 'Married'
 								: '-'}
 						</span>
