@@ -24,12 +24,14 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	cursor: pointer;
 }
 
 .sidebarListItem {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
+	color: black;
 }
 
 .sidebarIcon {
