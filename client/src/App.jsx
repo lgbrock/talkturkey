@@ -1,7 +1,7 @@
-import Home from './pages/home/Home';
-import Login from './pages/login/Login';
-import Register from './pages/register/Register';
-import Profile from './pages/profile/Profile';
+import Home from 'pages/home/Home';
+import Login from 'pages/login/Login';
+import Register from 'pages/register/Register';
+import Profile from 'pages/profile/Profile';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -9,8 +9,8 @@ import {
 	Redirect,
 } from 'react-router-dom';
 import { useContext } from 'react';
-import { AuthContext } from './context/AuthContext';
-import Messenger from './pages/messenger/Messenger';
+import { AuthContext } from 'context/AuthContext';
+import Messenger from 'pages/messenger/Messenger';
 
 const App = () => {
 	const { user } = useContext(AuthContext);
