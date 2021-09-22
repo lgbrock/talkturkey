@@ -1,7 +1,7 @@
 import { useContext, useRef } from 'react';
 import './login.css';
-import { loginCall } from 'apiCalls';
-import { AuthContext } from 'context/AuthContext';
+import { loginCall } from '../../apiCalls';
+import { AuthContext } from '../../context/AuthContext';
 import { CircularProgress } from '@material-ui/core';
 
 const Login = () => {
@@ -23,8 +23,7 @@ const Login = () => {
 				<div className='loginLeft'>
 					<h3 className='loginLogo'>Talk Turkey</h3>
 					<span className='loginDesc'>
-						Connect with your furry friends and the world around you on Talk
-						Turkey.
+						Connect with furfriends around the world on Talk Turkey.
 					</span>
 				</div>
 				<div className='loginRight'>
@@ -40,17 +39,21 @@ const Login = () => {
 							placeholder='Password'
 							type='password'
 							required
-							minLength='3'
+							minLength='6'
 							className='loginInput'
 							ref={password}
 						/>
 						<button className='loginButton' type='submit' disabled={isFetching}>
-							{isFetching ? <CircularProgress size='20px' /> : 'Log In'}
+							{isFetching ? (
+								<CircularProgress color='primary' size='20px' />
+							) : (
+								'Log In'
+							)}
 						</button>
 						<span className='loginForgot'>Forgot Password?</span>
 						<button className='loginRegisterButton'>
 							{isFetching ? (
-								<CircularProgress size='20px' />
+								<CircularProgress color='primary' size='20px' />
 							) : (
 								'Create a New Account'
 							)}
