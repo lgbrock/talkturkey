@@ -1,4 +1,8 @@
-const io = require('socket.io')(5100, {
+// Messenger
+const dotenv = require('dotenv');
+dotenv.config();
+
+const io = require('socket.io')(process.env.PORT || 5100, {
 	cors: {
 		origin: 'http://localhost:3000',
 	},

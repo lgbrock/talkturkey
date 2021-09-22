@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { axiosInstance } from '../../config';
 import { useRef } from 'react';
 import './register.css';
 import { useHistory } from 'react-router';
@@ -22,7 +22,7 @@ const Register = () => {
 				password: password.current.value,
 			};
 			try {
-				await axios.post('/auth/register', user);
+				await axiosInstance.post('/auth/register', user);
 				history.push('/login');
 			} catch (err) {
 				alert('Username has been taken');
@@ -34,9 +34,9 @@ const Register = () => {
 		<div className='login'>
 			<div className='loginWrapper'>
 				<div className='loginLeft'>
-					<h3 className='loginLogo'>Lamasocial</h3>
+					<h3 className='loginLogo'>Talk Turkey</h3>
 					<span className='loginDesc'>
-						Connect with friends and the world around you on Lamasocial.
+						Connect with your furry friends around the world on Talk Turkey!
 					</span>
 				</div>
 				<div className='loginRight'>

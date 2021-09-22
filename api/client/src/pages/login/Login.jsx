@@ -45,16 +45,12 @@ const Login = () => {
 							ref={password}
 						/>
 						<button className='loginButton' type='submit' disabled={isFetching}>
-							{isFetching ? (
-								<CircularProgress color='white' size='20px' />
-							) : (
-								'Log In'
-							)}
+							{isFetching ? <CircularProgress size='20px' /> : 'Log In'}
 						</button>
 						<span className='loginForgot'>Forgot Password?</span>
 						<button className='loginRegisterButton'>
 							{isFetching ? (
-								<CircularProgress color='white' size='20px' />
+								<CircularProgress size='20px' />
 							) : (
 								'Create a New Account'
 							)}

@@ -9,6 +9,7 @@
 	"author": "Logan Brock",
 	"license": "MIT",
 	"dependencies": {
+		"dotenv": "^10.0.0",
 		"nodemon": "^2.0.12",
 		"socket.io": "^4.1.3"
 	}

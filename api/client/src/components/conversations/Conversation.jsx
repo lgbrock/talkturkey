@@ -1,5 +1,5 @@
 import './conversation.css';
-import axios from 'axios';
+import { axiosInstance } from '../../config';
 import { useEffect, useState } from 'react';
 
 const Conversation = ({ conversation, currentUser }) => {
@@ -11,7 +11,7 @@ const Conversation = ({ conversation, currentUser }) => {
 
 		const getUser = async () => {
 			try {
-				const res = await axios('/users?userId=' + friendId);
+				const res = await axiosInstance('/users?userId=' + friendId);
 				setUser(res.data);
 			} catch (err) {
 				console.log(err);

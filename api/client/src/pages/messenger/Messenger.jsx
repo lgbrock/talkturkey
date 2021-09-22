@@ -5,7 +5,7 @@ import Message from 'components/message/Message';
 import ChatOnline from 'components/chatOnline/ChatOnline';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { AuthContext } from 'context/AuthContext';
-import axios from 'axios';
+import { axiosInstance } from '../../config';
 import { io } from 'socket.io-client';
 
 const Messenger = () => {
@@ -48,7 +48,7 @@ const Messenger = () => {
 	useEffect(() => {
 		const getConversations = async () => {
 			try {
-				const res = await axios.get('/conversations/' + user._id);
+				const res = await axiosInstance.get('/conversations/' + user._id);
 				setConversations(res.data);
 			} catch (err) {
 				console.log(err);
@@ -60,7 +60,7 @@ const Messenger = () => {
 	useEffect(() => {
 		const getMessages = async () => {
 			try {
-				const res = await axios.get('/messages/' + currentChat?._id);
+				const res = await axiosInstance.get('/messages/' + currentChat?._id);
 				setMessages(res.data);
 			} catch (err) {
 				console.log(err);
@@ -88,7 +88,7 @@ const Messenger = () => {
 		});
 
 		try {
-			const res = await axios.post('/messages', message);
+			const res = await axiosInstance.post('/messages', message);
 			setMessages([...messages, res.data]);
 			setNewMessage('');
 		} catch (err) {
