@@ -23,7 +23,7 @@ const Login = () => {
 				<div className='loginLeft'>
 					<h3 className='loginLogo'>Talk Turkey</h3>
 					<span className='loginDesc'>
-						Connect with furfriends around the world on Talk Turkey.
+						Connect with furry friends around the world with Talk Turkey!
 					</span>
 				</div>
 				<div className='loginRight'>

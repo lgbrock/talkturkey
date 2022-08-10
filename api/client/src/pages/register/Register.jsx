@@ -1,7 +1,7 @@
 import { axiosInstance } from '../../config';
 import { useRef } from 'react';
 import './register.css';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 const Register = () => {
 	const username = useRef();
